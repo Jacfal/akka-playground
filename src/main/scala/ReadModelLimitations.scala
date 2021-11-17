@@ -1,10 +1,10 @@
 object ReadModelLimitations extends App {
   // #1 OOP encapsulation is only valid in the single threaded models
   class BankAccount(private var amount: Int) {
-    override def toString(): String = s"$amount"
-    def withdraw(money: Int) = this.amount -= money
-    def deposit(money: Int) = this.amount += money
-    def getAmount = amount
+    override def toString: String = s"$amount"
+    def withdraw(money: Int): Unit = this.amount -= money
+    def deposit(money: Int): Unit = this.amount += money
+    def getAmount: Int = amount
   }
 
   val account = new BankAccount(2000)
