@@ -21,7 +21,6 @@ class AskSpec extends TestKit(ActorSystem("AskSpec"))
     TestKit.shutdownActorSystem(system)
   }
 
-  import AskSpec._
   "An authenticator" should {
     val authManager = system.actorOf(Props[AutManagerActor])
     "fail to authenticate a non-registered user" in {
